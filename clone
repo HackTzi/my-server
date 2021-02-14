@@ -1,5 +1,4 @@
 ls
 cd ./server && git clone https://github.com/yaderson/api-server.git
-ls
 cd ./api-server
-ls
+git pull
