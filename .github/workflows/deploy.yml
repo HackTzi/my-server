@@ -22,7 +22,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: cd ./my-server && sh clone
+        script: ls  && sh ./my-server/clone
     - name: up-project
       uses: appleboy/ssh-action@master
       with:
