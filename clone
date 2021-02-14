@@ -1,2 +1,2 @@
 ls
-cd ./server && git clone https://github.com/yaderson/api-server.git || cd ./server/api-server && git pull
+cd ./server && git clone https://github.com/yaderson/api-server.git || ls
