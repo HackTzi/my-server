@@ -30,4 +30,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: ls && sh ./my-server/up
+        script: sh ./my-server/up
