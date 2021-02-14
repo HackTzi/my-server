@@ -1,1 +1,1 @@
-cd server && git clone https://github.com/yaderson/api-server.git
+cd ./server && git clone https://github.com/yaderson/api-server.git
