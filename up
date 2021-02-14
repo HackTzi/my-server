@@ -1,1 +1,1 @@
-sh ./my-server/up
+sh ./server/api-server/up
