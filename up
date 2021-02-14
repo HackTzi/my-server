@@ -1,0 +1,3 @@
+ docker run --detach -p 80 -e VIRTUAL_HOST=api.hacktzi.tk uploads --name h-api
+ docker run --detach -p 80 -e VIRTUAL_HOST=blog.hacktzi.tk uploads --name h-blog
+ docker run --detach -p 80 -e VIRTUAL_HOST=static.hacktzi.tk uploads --name h-static
