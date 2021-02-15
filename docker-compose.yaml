@@ -10,5 +10,5 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
 networks:
   default:
-    nginx-proxy
+    - nginx-proxy
 
