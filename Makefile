@@ -5,6 +5,7 @@ clone: # Clone all repos
 ##TODO: custom script to run make from projects.yaml
 up: # Run all projects
 	cd ../server/api-server
+	ls
 	make run
 ##TODO: custom script to down make from projects.yaml
 down: # Down all projects
