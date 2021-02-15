@@ -1,0 +1,7 @@
+projects:
+  server1-api:
+    name: server1-api
+    repository: ''
+    branch: main
+    domain: api.hacktzi.tk
+    run-command: run #make run

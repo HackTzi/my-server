@@ -1,3 +1,0 @@
-docker rm -f h-api
-docker rm -f h-blog
-docker rm -f h-static
