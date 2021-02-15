@@ -1,13 +1,14 @@
 name: Deploy
 
-on: [push]
-
+on:  
+  release:
+    types: [published]
 jobs:
-  build:
-    name: run-command
+  deploy-projects:
+    name: deploy-projects
     runs-on: ubuntu-latest
     steps: 
-    - name: Update server
+    - name: Sync git with Github
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
@@ -15,7 +16,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: cd ./my-server && git pull
-    - name: clone repos
+    - name: Clone repositories
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
