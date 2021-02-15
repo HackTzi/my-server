@@ -1,6 +1,6 @@
 ##TODO: custom script to clone repos from projects.yaml
 clone: # Clone all repos 
-	cd ./server
+	cd ../server
 	git clone https://github.com/yaderson/api-server.git
 ##TODO: custom script to run make from projects.yaml
 up: # Run all projects
