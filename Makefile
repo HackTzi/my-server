@@ -4,7 +4,7 @@ clone: # Clone all repos
 	git clone https://github.com/yaderson/api-server.git || git pull
 ##TODO: custom script to run make from projects.yaml
 up: # Run all projects
-	cd .,/server/api-server
+	cd ../server/api-server
 	make run
 ##TODO: custom script to down make from projects.yaml
 down: # Down all projects
