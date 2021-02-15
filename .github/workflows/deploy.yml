@@ -7,7 +7,7 @@ jobs:
   deploy-projects:
     name: deploy-projects
     runs-on: ubuntu-latest
-    steps: 
+    steps:
     - name: Sync git with Github
       uses: appleboy/ssh-action@master
       with:
@@ -23,7 +23,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: ls 
+        script: cd ./my-server && make clone
 #     - name: Up projects
 #       uses: appleboy/ssh-action@master
 #       with:
