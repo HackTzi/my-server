@@ -9,4 +9,6 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
 networks:
-  default: nginx-proxy
+  default:
+    nginx-proxy
+
