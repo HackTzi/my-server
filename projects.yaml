@@ -1,7 +1,6 @@
-projects:
-  server1-api:
-    name: server1-api
-    repository: ''
-    branch: main
-    domain: api.hacktzi.tk
-    run-command: run #make run
+server1-api:
+  folder-path: ""
+  repository: ""
+  domain: api.hacktzi.tk
+  deploy-branch: main
+  deploy-command: run #make run
