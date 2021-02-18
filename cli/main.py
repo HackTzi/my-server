@@ -45,7 +45,7 @@ def main():
         print(project_name)
         values['name'] = project_name
         clone_or_update_proyect(values)
-        # deploy_project(values)
+        deploy_project(values)
 
 
 if __name__ == '__main__':
