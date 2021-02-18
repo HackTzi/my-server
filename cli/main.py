@@ -44,7 +44,11 @@ def main():
     for project_name, values in projects.items():
         print(project_name)
         values['name'] = project_name
+<<<<<<< HEAD
         clone_or_update_project(values)
+=======
+        clone_or_update_proyect(values)
+>>>>>>> b1c291719e1aecea91ea46a546469c3709e5db1f
         deploy_project(values)
 
 
