@@ -10,7 +10,7 @@ def read_proyects(file_path):
         return projects_list
 
 
-def clone_or_update_proyect(project):
+def clone_or_update_project(project):
     repository = project.get('repository', None)
     if repository is not None:
         project_name = project['name']
@@ -44,8 +44,8 @@ def main():
     for project_name, values in projects.items():
         print(project_name)
         values['name'] = project_name
-        clone_or_update_proyect(values)
-        # deploy_project(values)
+        clone_or_update_project(values)
+        deploy_project(values)
 
 
 if __name__ == '__main__':

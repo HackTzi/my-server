@@ -1,6 +1,5 @@
 server1-api:
-  folder-path: ""
   repository: ""
   domain: api.hacktzi.tk
-  deploy-branch: main
+  deploy-branch: deploy
   deploy-command: run #make run
