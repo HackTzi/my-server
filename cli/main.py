@@ -10,13 +10,14 @@ def read_proyects(file_path):
         return projects_list
 
 
-def clone_or_update_project(project):
+def update_and_deploy_project(project):
     repository = project.get('repository', None)
     if repository is not None:
         project_name = project['name']
         project_path = os.path.exists(f'~/server/{project_name}/')
+        project_git = os.path.exists(f'~/server/{project_name}/.git/')
 
-        if project_path:
+        if project_path and project_git:
             project_branch = project['deploy-branch']
             os.system(f'git pull origin {project_branch}')
         else:
@@ -26,31 +27,24 @@ def clone_or_update_project(project):
                 os.system(f'git clone {project_repository}')
             else:
                 print('[!] Please ensure that the repository is an url.')
-    else:
-        print('[!] Please ensure provide the repository in your proyects.yml')
+               
+        deploy_command = project.get('deploy-command', None)
+        
+        if deploy_command is not None:
+            print('Deploy proyect...')
+            os.system(f'cd {project_path} && {deploy_command} &')
+        else:
+            print('[!] Please ensure provide the deploy_command in your projects.yml')
 
-
-def deploy_project(project):
-    deploy_command = project.get('deploy-command', None)
-    if deploy_command is not None:
-        print('Deploy proyect...')
-        os.system(f'{deploy_command} &')
     else:
-        print('[!] Please ensure provide the deploy_command in your proyects.yml')
+        print('[!] Please ensure provide the repository in your projects.yml')
 
 
 def main():
     projects = read_proyects('../projects.yaml')
     for project_name, values in projects.items():
-        print(project_name)
         values['name'] = project_name
-<<<<<<< HEAD
-        clone_or_update_project(values)
-=======
-        clone_or_update_proyect(values)
->>>>>>> b1c291719e1aecea91ea46a546469c3709e5db1f
-        deploy_project(values)
-
+        update_and_deploy_project(project)
 
 if __name__ == '__main__':
     print("""
