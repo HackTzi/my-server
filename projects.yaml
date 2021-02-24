@@ -1,4 +1,5 @@
 server1-api:
+  name: api-test-server-manager
   repository: https://github.com/yaderson/api-server.git
   domain: api.hacktzi.tk
   deploy-branch: main
