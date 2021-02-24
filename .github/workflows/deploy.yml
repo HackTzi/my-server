@@ -16,14 +16,6 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: cd ./my-server && git pull
-    - name: Clone repositories
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        script: ls && cd ./my-server && make clone
     - name: Up projects
       uses: appleboy/ssh-action@master
       with:
@@ -31,4 +23,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: cd ./my-server && make up
+        script: cd ./my-server && make run
