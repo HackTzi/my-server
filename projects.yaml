@@ -1,5 +1,5 @@
 server1-api:
-  repository: ""
+  repository: https://github.com/yaderson/api-server.git
   domain: api.hacktzi.tk
   deploy-branch: deploy
   deploy-command: run #make run
