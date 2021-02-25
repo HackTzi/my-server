@@ -1,4 +1,4 @@
-server1-api:
+api-server:
   name: api-server
   repository: https://github.com/yaderson/api-server.git
   domain: api.hacktzi.tk
