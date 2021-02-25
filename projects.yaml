@@ -3,4 +3,4 @@ server1-api:
   repository: https://github.com/yaderson/api-server.git
   domain: api.hacktzi.tk
   deploy-branch: main
-  deploy-command: make run #make run
+  deploy-command: make run
