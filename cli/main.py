@@ -37,7 +37,7 @@ def update_and_deploy_project(project):
             else:
                 print('[!] Please ensure to provide deploy-branch.')
 
-        elif project_path:
+        else:
             print('Clone project...')
             project_repository = project.get('repository', None)
 
