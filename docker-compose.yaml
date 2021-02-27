@@ -16,6 +16,8 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     network_mode: bridge
   letsencrypt-proxy:
+    environmet:
+      - DEFAULT_EMAIL=yadersonjesuspatinovidal@gmail.com
     restart: always
     image: jrcs/letsencrypt-nginx-proxy-companion
     depends_on:
