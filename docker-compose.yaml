@@ -17,5 +17,5 @@ services:
     volumes:
       - ./data/certs:/etc/nginx/certs:rw
        - /var/run/docker.sock:/var/run/docker.sock:ro
-    enviroment:
+    environment:
       - DEFAULT_EMAIL=yadersonjesuspatinovidal@gmail.com
