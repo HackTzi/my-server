@@ -14,8 +14,9 @@ services:
     image: jrcs/letsencrypt-nginx-proxy-companion
     depends_on:
       - nginx-proxy
+    volumes_from:
+      - nginx-proxy
     volumes:
       - ./data/certs:/etc/nginx/certs:rw
       - /var/run/docker.sock:/var/run/docker.sock:ro
-    environment:
-      - DEFAULT_EMAIL=yadersonjesuspatinovidal@gmail.com
+    network_mode: bridge
