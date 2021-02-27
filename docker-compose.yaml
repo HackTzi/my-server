@@ -9,6 +9,7 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     network_mode: bridge
   letsencrypt-proxy:
     restart: always
@@ -19,5 +20,5 @@ services:
       - nginx-proxy
     volumes:
       - ./data/certs:/etc/nginx/certs:rw
-      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /var/run/docker.sock:/var/run/docker.sock:rw
     network_mode: bridge
