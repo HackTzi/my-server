@@ -9,6 +9,7 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+    network_mode: bridge
   letsencrypt-proxy:
     restart: always
     image: jrcs/letsencrypt-nginx-proxy-companion
