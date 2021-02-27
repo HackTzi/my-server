@@ -23,5 +23,5 @@ services:
     volumes:
       - ./data/certs:/etc/nginx/certs:rw
       - /var/run/docker.sock:/var/run/docker.sock:rw
-      - acme:/etc/acme.sh
+      - /acme:/etc/acme.sh
     network_mode: bridge
